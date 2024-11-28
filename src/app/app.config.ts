@@ -17,18 +17,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideToastr(),
     provideHttpClient(),
-    provideFirebaseApp(() =>
-      initializeApp({
-        projectId: 'timesheet-2b740',
-        appId: '1:841860863724:web:6d27ab6b29b2b4b6bb77c9',
-        storageBucket: 'timesheet-2b740.firebasestorage.app',
-        apiKey: 'AIzaSyBLjQ4-yqnBnjp-nkufvejCBHg6GJnI5aE',
-        authDomain: 'timesheet-2b740.firebaseapp.com',
-        messagingSenderId: '841860863724',
-        measurementId: 'G-Q338MK761R',
-      })
-    ),
+    provideFirebaseApp(() => initializeApp()),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()), provideAnimationsAsync(),
+    provideFirestore(() => getFirestore()),
+    provideAnimationsAsync(),
   ],
 };
