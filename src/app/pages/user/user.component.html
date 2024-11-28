@@ -1,0 +1,8 @@
+<app-header (onNewUserEvent)="onClickNewUser()" />
+<section>
+  <app-grid
+    [displayedColumns]="displayedColumns"
+    [data]="users()"
+    [sortableColumns]="sortables"
+  />
+</section>

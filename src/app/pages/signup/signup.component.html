@@ -1,12 +1,12 @@
 <app-default-login-layout
-  title="Faça login em sua conta"
-  primaryBtnText="Login"
-  secondaryBtnText="Signup"
+  title="Faça o cadastro e comece agora"
+  primaryBtnText="Signup"
+  secondaryBtnText="Login"
   (submit)="submit()"
   (navigate)="navigate()"
-  [disablePrimaryBtn]="!loginForm.valid"
+  [disablePrimaryBtn]="!signupForm.valid"
 >
-  <form [formGroup]="loginForm">
+  <form [formGroup]="signupForm">
     <app-primary-input
       formControlName="email"
       inputName="email"
@@ -24,6 +24,13 @@
     >
       <img src="/assets/icons/password-icon.svg" />
     </app-primary-input>
-    <span>Esqueceu a senha?</span>
+    <app-primary-input
+      formControlName="passwordConfirm"
+      inputName="passwordConfirm"
+      type="password"
+      label="Confirme sua senha"
+    >
+      <img src="/assets/icons/password-icon.svg" />
+    </app-primary-input>
   </form>
 </app-default-login-layout>

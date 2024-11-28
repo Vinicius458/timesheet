@@ -1,0 +1,26 @@
+mat-toolbar {
+  &.main-header {
+    padding: 0 8px;
+    position: relative;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    .logo {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 50%;
+      white-space: nowrap;
+      margin: auto 0;
+      padding: 0 64px 0 16px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .main-section {
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    align-items: center;
+    grid-area: content;
+    gap: 8px;
+    flex-grow: 3;
+    background: linear-gradient(124deg, #005493 0%, #00a5eb 87%);
+    background-size: cover;
+
+    .center {
+      flex-direction: column;
+      box-sizing: border-box;
+      display: flex;
+      place-content: start;
+      align-items: center;
+      width: 30%;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 20px 20px 30px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3),
+        -5px -5px 20px rgba(0, 0, 0, 0.1); /* Sombra para efeito de profundidade */
+      transform: translateY(
+        -10px
+      ); /* Deslocamento vertical para dar a impressão de estar saltada */
+      transition: all 0.3s ease; /* Suaviza o efeito */
+
+      .title {
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+
+      form {
+        min-width: 150px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+
+        mat-form-field {
+          width: 100%;
+        }
+      }
+
+      .logo {
+        width: 250px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          vertical-align: top;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    .main-section {
+      .center {
+        width: 80%;
+      }
+    }
+  }
+}

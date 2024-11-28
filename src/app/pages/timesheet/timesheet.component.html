@@ -1,0 +1,21 @@
+<main>
+  <section class="main-section">
+    <div class="center">
+      <div class="title">Registre seu ponto utilizando o código de usuário</div>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label> Código do usuário </mat-label>
+          <input matInput type="text" formControlName="userCode" mask="0000" />
+        </mat-form-field>
+        <button
+          [disabled]="!userForm.valid"
+          mat-raised-button
+          color="primary"
+          type="submit"
+        >
+          Registrar
+        </button>
+      </form>
+    </div>
+  </section>
+</main>

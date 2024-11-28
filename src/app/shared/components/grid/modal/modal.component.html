@@ -1,0 +1,49 @@
+<div mat-dialog-title>
+  <h1 class="title">Formulário de usuário</h1>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label> Nome </mat-label>
+        <input matInput type="text" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label> Email </mat-label>
+        <input matInput type="text" formControlName="email" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label> CPF </mat-label>
+        <input
+          matInput
+          mask="000.000.000-00"
+          type="text"
+          formControlName="cpf"
+        />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label> Código do usuário </mat-label>
+        <input matInput type="text" mask="0000" formControlName="userCode" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button [mat-dialog-close]="false" type="button">
+      Cancelar
+    </button>
+    <button
+      [disabled]="!userForm.valid"
+      mat-raised-button
+      color="primary"
+      type="submit"
+    >
+      {{ getTitle() }}
+    </button>
+  </div>
+</form>
